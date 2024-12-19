@@ -27,8 +27,8 @@ module Grape
       object = {
         info: info_object(options[:info].merge(version: options[:doc_version])),
         swagger: '2.0',
-        produces: content_types_for(target_class),
-        consumes: content_types_for(target_class),
+        produces: ['application/x-www-form-urlencoded'],
+        consumes: ['application/x-www-form-urlencoded'],
         authorizations: options[:authorizations],
         securityDefinitions: options[:security_definitions],
         security: options[:security],
